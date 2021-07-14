@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "gameplay-app",
-    "slug": "gameplay-app",
+    "name": "gameplay",
+    "slug": "gameplay",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0A1033"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
