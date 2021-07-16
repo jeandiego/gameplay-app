@@ -1,34 +1,32 @@
-import { StyleSheet } from "react-native";
-import { theme } from "../../global/styles/themes";
+import { TouchableOpacity } from 'react-native';
+import styled from 'styled-components/native';
 
+export const Container = styled(TouchableOpacity)`
+  height: 56px;
+  background-color: ${(p) => p.theme.colors.primary};
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: center;
+`;
 
+export const IconWrapper = styled.View`
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-right-width: 1px;
+  border-color: ${(p) => p.theme.colors.line};
+`;
 
-export const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: 56,
-    backgroundColor: theme.colors.primary,
-    borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
-    },
-  iconWrapper: {
-    width: 56,
-    height: 56,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRightWidth: 1,
-    borderColor: theme.colors.line,
-  },
-  icon: {
-    height: 18,
-    width: 24,
-  },
-  title: {
-    flex: 1,
-    color: theme.colors.heading,
-    fontSize: 15,
-    fontWeight: "bold",
-    textAlign: 'center',
-  },
-})
+export const Icon = styled.Image`
+  height: 18px;
+  width: 24px;
+`;
+
+export const Title = styled.Text`
+  flex: 1;
+  color: ${(p) => p.theme.colors.heading};
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+`;
