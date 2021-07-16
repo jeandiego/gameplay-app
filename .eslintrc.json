@@ -7,8 +7,7 @@
   "extends": [
     "airbnb",
     "plugin:react-native/all",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -24,11 +23,18 @@
   },
   "plugins": ["react", "react-native", "jsx-a11y", "import", "prettier","module-resolver"],
   "rules": {
-    "prettier/prettier": "error",
-    "react/jsx-filename-extension": [
+    "import/extensions": [
       "error",
-      { "extensions": [".js", ".jsx"] }
-    ],
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".ts"] }],
     "import/prefer-default-export": "off",
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "react/jsx-one-expression-per-line": "off",
@@ -44,6 +50,10 @@
   },
   "settings": {
     "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    },
+      "typescript": {},
       "babel-plugin-root-import": { "rootPathSuffix": "src" },
       "babel-module": {}
     }
