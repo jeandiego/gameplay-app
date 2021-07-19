@@ -24,9 +24,9 @@ export const Icon = styled.Image`
 `;
 
 export const Title = styled.Text`
+  font-family: ${(p) => p.theme.fonts.text500};
+  font-size: 15px;
+  text-align: center;
   flex: 1;
   color: ${(p) => p.theme.colors.heading};
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
 `;
