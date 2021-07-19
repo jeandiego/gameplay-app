@@ -8,8 +8,10 @@ import {
   Rajdhani_700Bold,
 } from '@expo-google-fonts/rajdhani';
 import AppLoading from 'expo-app-loading';
+import { StatusBar } from 'react-native';
 import GlobalStyle from './src/global/styles/themes';
 import SignIn from './src/screens/SignIn';
+import { Background } from './src/components/Background';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,7 +27,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={GlobalStyle}>
-      <SignIn />
+      <Background>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        <SignIn />
+      </Background>
     </ThemeProvider>
   );
 }
