@@ -23,6 +23,7 @@
   },
   "plugins": ["react", "react-native", "jsx-a11y", "import", "prettier","module-resolver"],
   "rules": {
+    "react/prop-types": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -43,7 +44,7 @@
     "react-native/no-inline-styles": "off",
     "react/jsx-props-no-spreading": "off",
     "global-require": "off",
-    // "react/forbid-prop-types": "off",
+    "react/forbid-prop-types": "off",
     "no-use-before-define": "off",
     "react-native/no-raw-text": "off",
     "no-console":"off"
