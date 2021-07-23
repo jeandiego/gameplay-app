@@ -1,6 +1,15 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import SignInView from './view';
 
-const SignIn = () => <SignInView />;
+export function SignIn() {
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
+
+  return <SignInView handleSignIn={handleSignIn} />;
+}
 
 export default SignIn;
